@@ -3,7 +3,7 @@
 
 ## Common information:
 
-By now script has been tested on cisco devices, managed by next os: ios-xr, ios, nxos. Script has been written in python 2.7
+Script has been tested on cisco devices, managed by next os: ios-xr, ios, nxos by now. Script has been written in python 2.7
 
 Script consists of the next parts:
 
