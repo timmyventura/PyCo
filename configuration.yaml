@@ -1,174 +1,23 @@
-username: spd
-password: "rs95d3w3;"
-command: show run
-root_directory: /root/configs
+username: <username>
+password: <password>
+command: <command>
+root_directory: <root_directory>
 notification:
-   active: true
-   server: 192.168.175.15
-   from_host: Scripy <scripy@scripy.localdomain>
+   active: <true/false>
+   server: <server ip-address, or name>
+   from_host: <from email address>
    to_host:
-      - t.petrov@maximatelecom.ru
+      - <to email address>
    subject: 
-      normal: 'Backup configuration files'
-      error: 'Error: connection problem'
-   template: /root/python-scripts/template.j2      
+      normal: <normal subject>
+      error:  <subject in error case>
+   template: <path to template.j2>
 zones: 
-   office:
-     active: false
-     devices:
-       - name: SG300-tech-3.spb.corp
-         ip: 192.168.160.251
-         sleep: 30
-         terminal: terminal data
-         active: true
-       - name: SG300-tech-2.spb.corp
-         ip: 192.168.160.252
-         sleep: 30
-         terminal: terminal data
-         active: true
-       - name: SG300-tech-1.spb.corp
-         ip: 192.168.160.254
-         sleep: 30
-         terminal: terminal data
-         active: true
-       - name: Isr4k.office-tech
-         ip: 192.168.161.128
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-   core_zven:
-     active: false
-     devices:
-       - name: NCS5k-agg.m1.spb
-         ip: 10.0.10.151
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: NCS5k-agg.m5-2.spb
-         ip: 10.0.10.155
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: NCS5k-core.zven.spb
-         ip: 10.0.10.141
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: SG300-core-zven-spb
-         ip: 10.192.0.100
-         sleep: 30
-         terminal: terminal data
-         active: true
-   core_spas:
-     active: false
-     devices:
-       - name: NCS5k-agg.m4-3.spb
-         ip: 10.0.10.154
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: NCS5k-agg.m2.spb
-         ip: 10.0.10.152
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: NCS5k-core.spas.spb
-         ip: 10.0.10.142
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: SG300-core-spas-spb
-         ip: 10.193.0.100
-         sleep: 30
-         terminal: terminal data
-         active: true
-   selectel:
-     active: false
-     devices:
-       - name: ASR9k-br.sel.spb
-         ip: 10.0.10.132
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: c2960-core.sel.spb
-         ip: 10.1.231.211
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: n9k-core.sel.spb
-         ip: 10.1.231.210
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: c2960-it.sel.spb
-         ip: 10.1.231.213
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: n9k-it.sel.spb
-         ip: 10.1.231.212
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-   retn:
-     active: false
-     devices:
-       - name: ASR9k-br.retn.spb
-         ip: 10.0.10.131
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: c2960-core.retn.spb
-         ip: 10.1.230.211
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: n9k-core.retn.spb
-         ip: 10.1.230.210
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: c2960-it.retn.spb
-         ip: 10.1.230.213
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: n9k-it.retn.spb
-         ip: 10.1.230.212
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-   sitcenter:
-     active: false
-     devices:
-       - name: SG350-Sitcenter
-         ip: 10.192.141.98
-         sleep: 30
-         terminal: terminal data
-         active: true
-       - name: SG300-Sitcenter
-         ip: 10.192.141.97
-         sleep: 30
-         terminal: terminal data
-         active: true
-   dmz:
-     active: false
-     devices:
-       - name: ASA-5508-VPN
-         ip: 10.1.225.82
-         sleep: 4
-         terminal: terminal pager 0
-         active: true
-   office_lab:
-     active: true
-     devices:
-       - name: NCS5k-agg.M5-2.spb.old
-         ip: 192.168.170.231
-         sleep: 4
-         terminal: terminal length 0
-         active: true
-       - name: NCS5k-agg.M4-3.spb.old
-         ip: 192.168.170.232
-         sleep: 4
-         terminal: terminal length 0
-         active: true
+   <zone_name>:
+     active: <true/false>
+     devices: 
+       - name: <device_name>
+         ip: <device_ip>
+         sleep: <sleep_time>
+         terminal: <terminal command>
+         active: <true/false>
