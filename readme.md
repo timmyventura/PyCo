@@ -25,8 +25,8 @@ Before using this script, make sure that you have the following outer dependenci
   
 Let's discuss about the structure of configuration file in detail:
 
-1. username - username for logging to network device
-2. password - password for logging to network device
+1. username - username for logging to network devices
+2. password - password for logging to network devices
 3. command  - main command performing for all devices
 4. root_directory - directory in file system, where information gathered from network devices will be stored. Script automatically create file and path from root directory if it doesn't exist. File path has next structure: /<root_directory>/<devices_name>/<year>/<month>/<ip_address-day-time>
 5. notification - parameters for sending notification via smtp:
