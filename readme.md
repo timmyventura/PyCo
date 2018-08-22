@@ -8,8 +8,8 @@ Script has been tested on cisco devices, managed by next os: ios-xr, ios, nxos b
 Script consists of the next parts:
 
   1) PyCo.py - main module
-  2) configuration.yaml - configuration file where necessary information is described. This file will be discussed in more detail later.
-  3) template.j2 - template which describing body format in smtp message. Using Jinja2 format
+  2) configuration.yaml - configuration file where necessary information is described. File content is described in more detail below
+  3) template.j2 - template which describing body format in smtp message. Jinja2 template format is being used
 
 
 ## Dependencies:  
