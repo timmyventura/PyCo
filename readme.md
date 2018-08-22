@@ -40,7 +40,7 @@ Let's discuss about the structure of configuration file in detail:
      - zone_name - certain zone
           * active - if this field is true then command (see clause 3) will be performed for all devices at this zone
           * devices - list of devices at zone
-               1. 6.1.2.1. name - hostname of device
+               1. name - hostname of device
                2. ip - ip-address of device
                3. sleep - system sleep time between sending information to device and receiving it. For devices managed by ios-xr, ios, nx-os recommended time is 4 seconds. Some type of devices, for examples cisco SG300 series switches, require more time to give an answer. For this devices i recommend you to use 30 seconds sleep time interval.
                4. terminal - command for disabling paging at device's cli. This command is used when you need to get all lines without pausing
