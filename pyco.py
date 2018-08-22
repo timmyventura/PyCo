@@ -115,7 +115,7 @@ if __name__ == '__main__':
          if active_devices['devices']:
             active_zones['zones'][zone] = active_devices
          if inactive_devices['devices']:
-		    inactive_zones['zones'][zone] = inactive_devices
+            inactive_zones['zones'][zone] = inactive_devices
    if template['notification']['active']:
       if active_zones['zones']:			
          send_notification(template_rendering(active_zones, template['notification']['template']), 'normal', **template['notification'])
