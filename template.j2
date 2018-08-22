@@ -1,0 +1,6 @@
+{% for zone, param in zones | dictsort %}
+{{zone}}:
+    {%for device in param.devices%}
+     device_name: {{"%s,%-10s" | format(device.name, "")}} status: {{device.status}}
+    {%endfor%}
+{%endfor%}	
