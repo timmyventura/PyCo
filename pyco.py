@@ -111,7 +111,7 @@ if __name__ == '__main__':
                  inactive_devices['devices'].append({'name': device['name'], 'status': 'Error. Message: {0}'.format(exc)})
                  continue
                else:
-			     active_devices['devices'].append({'name': device['name'], 'status': 'OK'})
+                 active_devices['devices'].append({'name': device['name'], 'status': 'OK'})
          if active_devices['devices']:
             active_zones['zones'][zone] = active_devices
          if inactive_devices['devices']:
