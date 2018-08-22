@@ -25,26 +25,26 @@ Before using this script, make sure that you have the following outer dependenci
   
 Let's discuss about the structure of configuration file in detail:
 
-  1. username - username for logging to network device
-  2. password - password for logging to network device
-  3. command  - main command performing for all devices
-  4. root_directory - directory in file system, where information gathered from network devices will be stored. Script automatically create file and path from root directory if it doesn't exist. File path has next structure: /<root_directory>/<devices_name>/<year>/<month>/<ip_address-day-time>
-  5. notification - parameters for sending notification via smtp:
-   5.1. active - if this field is true, notification will be sent
-   5.2. server - ip-address or hostname of smtp server
-   5.3. from_host - field "FROM" in smtp message
-   5.4. to_host - list of email receivers. Receivers in this list putting into "TO" smtp field
-   5.6. subject - subject of email. There are two types of subjects: normal and error
-   5.7. template - path to template file. For more information see template.j2 file above
-  6. zones - all devices has been divided into zones for more convenient usage. For example, zones may be physical location (data centers or another areas) where network devices are located, or type of devices(switchers, routers, dmz and etc). I recommend you to use physical location as zones
-   6.1. <zone name> - certain zone
-    6.1.1. active - if this field is true then command (see clause 3) will be performed for all devices at this zone
-    6.1.2. devices - list of devices at zone
-      6.1.2.1. name - hostname of device
-      6.1.2.2. ip - ip-address of device
-      6.1.2.3. sleep - system sleep time between sending information to device and receiving it. For devices managed by ios-xr, ios, nx-os recommended time is 4 seconds. Some type of devices, for examples cisco SG300 series switches, require more time to give an answer. For this devices i recommend you to use 30 seconds sleep time interval.
-      6.1.2.4. terminal - command for disabling paging at device's cli. This command is used when you need to get all lines without pausing
-      6.1.2.5. active - if this field is true then command (see clause 3) will be performed for device at this zone.
+1. username - username for logging to network device
+2. password - password for logging to network device
+3. command  - main command performing for all devices
+4. root_directory - directory in file system, where information gathered from network devices will be stored. Script automatically create file and path from root directory if it doesn't exist. File path has next structure: /<root_directory>/<devices_name>/<year>/<month>/<ip_address-day-time>
+5. notification - parameters for sending notification via smtp:
+     - active - if this field is true, notification will be sent
+     - server - ip-address or hostname of smtp server
+     - from_host - field "FROM" in smtp message
+     - to_host - list of email receivers. Receivers in this list putting into "TO" smtp field
+     - subject - subject of email. There are two types of subjects: normal and error
+     - template - path to template file. For more information see template.j2 file above
+6. zones - all devices has been divided into zones for more convenient usage. For example, zones may be physical location (data centers or another areas) where network devices are located, or type of devices(switchers, routers, dmz and etc). I recommend you to use physical location as zones
+     - zone_name - certain zone
+          * active - if this field is true then command (see clause 3) will be performed for all devices at this zone
+          * devices - list of devices at zone
+               1. 6.1.2.1. name - hostname of device
+               2. ip - ip-address of device
+               3. sleep - system sleep time between sending information to device and receiving it. For devices managed by ios-xr, ios, nx-os recommended time is 4 seconds. Some type of devices, for examples cisco SG300 series switches, require more time to give an answer. For this devices i recommend you to use 30 seconds sleep time interval.
+               4. terminal - command for disabling paging at device's cli. This command is used when you need to get all lines without pausing
+               5. active - if this field is true then command (see clause 3) will be performed for device at this zone.
 	  
 ### Example:
 ``` 
@@ -98,6 +98,7 @@ Use
 
 to get more information about keys
 
+## Feedback:
 
 For any questions, arisen problems or if you want to get more information, please contact:
 
