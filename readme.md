@@ -25,7 +25,7 @@ Before using this script, make sure that you have the following outer dependenci
 
 **Disclaimer:**
 
-` On most devices if you want to gather info like running-config, mac-table, arps and etc. you need to have a user with privilege level 15. Script doesn't quarantee correct work with privilege level less then 15.
+` On most devices if you want to gather info like running-config, mac-table, arps and etc. you need to have a user with privilege level 15. Script doesn't guarantee correct work with privilege level less then 15.
 I shall have tried to implement this functionality by the next release. Thanks for understanding.`
   
 Let's discuss about the structure of configuration file in detail:
