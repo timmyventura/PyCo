@@ -13,7 +13,6 @@ def get_argm_from_user(): # Set arguments for running
     parser = argparse.ArgumentParser()
     parser.add_argument("-c", "--configuration", dest="configuration", default = 'configuration.yaml', help="Path to configuration file")
     parser.add_argument("-l", "--log", dest="log", default = 'filename.log', help="Write paramiko logs to certain file")
-    parser.add_argument("-e", "--email", dest="email", help="Email for sending errors")
     return parser.parse_args()
 
 
