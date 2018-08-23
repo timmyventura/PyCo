@@ -46,11 +46,11 @@ def run_cisco_command(remote_conn, time_to_sleep, command, terminal):
 
 def get_filepath(root, devicename, ip):
 
-   mytime = time.strftime('%d-%H-%M-%S')
-   month = time.strftime('%m')
-   year = time.strftime('%Y')
-   filename = (ip + "-" + mytime)
-   return os.path.join(root, devicename, year, month, filename)
+    mytime = time.strftime('%d-%H-%M-%S')
+    month = time.strftime('%m')
+    year = time.strftime('%Y')
+    filename = (ip + "-" + mytime)
+    return os.path.join(root, devicename, year, month, filename)
 
 
 def parsing_configuration(config_file):
@@ -65,17 +65,17 @@ def parsing_configuration(config_file):
 	
 def write_to_file(root, ip, devicename, output):
    
-   filepath = get_filepath(root, devicename, ip)
-   if not os.path.exists(os.path.dirname(filepath)):
-    os.makedirs(os.path.dirname(filepath))
-   try:
-     with open(filepath, "w") as f:
-       f.write(output)
-       f.close()
-   except Exception as exc:
-       print(exc)
-   else:
-       return filepath   
+    filepath = get_filepath(root, devicename, ip)
+    if not os.path.exists(os.path.dirname(filepath)):
+     os.makedirs(os.path.dirname(filepath))
+    try:
+      with open(filepath, "w") as f:
+        f.write(output)
+        f.close()
+    except Exception as exc:
+        print(exc)
+    else:
+        return filepath   
 
 def send_notification(text, subject_type, **notifications):
     body = "\r\n".join(("From: %s" % notifications['from_host'], "To: %s" % ",".join(notifications['to_host']), "Subject: %s" % notifications['subject'][subject_type], "", text))
