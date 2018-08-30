@@ -25,7 +25,7 @@ Before using this script, make sure that you have the following outer dependenci
 
 **Disclaimer:**
 
-` At most devices if you want to gather info like running-config, mac-table, arps and etc. you need to have a user with privilege level 15. Script doesn't guarantee correct work with privilege level less then 15.
+`If you want to gather info like running-config, mac-table, arps and etc from network devices you need to have a user with privilege level 15. Script doesn't guarantee correct work with privilege level less then 15.
 I shall have tried to implement this functionality by the next release. Thanks for understanding.`
   
 Let's discuss about the structure of configuration file in detail:
@@ -41,7 +41,7 @@ Let's discuss about the structure of configuration file in detail:
      - to_host - list of email receivers. Receivers in this list putting into "TO" smtp field
      - subject - subject of email. There are two types of subjects: normal and error
      - template - path to template file. For more information see template.j2 file above
-6. zones - all devices has been divided into zones for more convenient usage. For example, zones may be physical location (data centers or another areas) where network devices are located, or type of devices(switchers, routers, dmz and etc). I recommend you to use physical location as zones
+6. zones - all devices has been divided into zones for more convenient usage. For example: zones may be physical location (data centers or another areas) where network devices are located, or type of devices(switchers, routers, dmz and etc). I recommend you to use physical location as zones
      - zone_name - certain zone
           * active - if this field is true then command (see clause 3) will be performed for all devices at this zone
           * devices - list of devices at zone
