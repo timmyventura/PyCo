@@ -1,3 +1,4 @@
+
 import paramiko
 import time
 import sys, os
@@ -125,8 +126,8 @@ if __name__ == '__main__':
             problem_zones['zones'][zone] = problem_devices
    if template['notification']['active']:
       if nice_zones['zones']:			
-         send_notification(template_rendering(active_zones, template['notification']['template']), 'normal', **template['notification'])
+         send_notification(template_rendering(nice_zones, template['notification']['template']), 'normal', **template['notification'])
       if problem_zones['zones']:
-         send_notification(template_rendering(inactive_zones, template['notification']['template']), 'error', **template['notification'])
+         send_notification(template_rendering(problem_zones, template['notification']['template']), 'error', **template['notification'])
   
  
