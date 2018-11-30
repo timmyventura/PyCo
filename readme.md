@@ -103,9 +103,4 @@ Use
 
 to get more information about keys
 
-## Feedback:
 
-For any questions, arisen problems or if you want to get more information, please contact:
-
-* Email: timmyventura@yandex.ru
-* Telegram: @Petrov_Timofey 
